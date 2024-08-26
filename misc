@@ -1,0 +1,283 @@
+--[=[
+ d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
+88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
+88      88    88    88            odD'      88      88    88 88ooo88 
+88  ooo 88    88    88          .88'        88      88    88 88~~~88 
+88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88    @uniquadev
+ Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
+]=]
+
+-- Instances: 8 | Scripts: 2 | Modules: 0 | Tags: 0
+local G2L = {};
+
+-- StarterGui.Gui for AR2
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"]["Name"] = [[Gui for AR2]];
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+
+
+-- StarterGui.Gui for AR2.Frame
+G2L["2"] = Instance.new("Frame", G2L["1"]);
+G2L["2"]["BorderSizePixel"] = 0;
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
+G2L["2"]["Style"] = Enum.FrameStyle.DropShadow;
+G2L["2"]["Size"] = UDim2.new(0, 532, 0, 286);
+G2L["2"]["Position"] = UDim2.new(0.22719, 0, 0.27612, 0);
+G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+
+-- StarterGui.Gui for AR2.Frame.TextButton
+G2L["3"] = Instance.new("TextButton", G2L["2"]);
+G2L["3"]["BorderSizePixel"] = 0;
+G2L["3"]["TextSize"] = 14;
+G2L["3"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3"]["BackgroundColor3"] = Color3.fromRGB(255, 161, 178);
+G2L["3"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["3"]["Size"] = UDim2.new(0, 250, 0, 52);
+G2L["3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3"]["Text"] = [[AIMLOCK, coming soon]];
+G2L["3"]["Style"] = Enum.ButtonStyle.RobloxRoundButton;
+G2L["3"]["Position"] = UDim2.new(-0.00093, 0, 0.49922, 0);
+
+
+-- StarterGui.Gui for AR2.Frame.TextButton
+G2L["4"] = Instance.new("TextButton", G2L["2"]);
+G2L["4"]["BorderSizePixel"] = 0;
+G2L["4"]["TextSize"] = 14;
+G2L["4"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4"]["BackgroundColor3"] = Color3.fromRGB(255, 118, 38);
+G2L["4"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["4"]["Size"] = UDim2.new(0, 250, 0, 52);
+G2L["4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4"]["Text"] = [[ESP, T to e/d]];
+G2L["4"]["Style"] = Enum.ButtonStyle.RobloxRoundButton;
+G2L["4"]["Position"] = UDim2.new(-0.00071, 0, 0.28256, 0);
+
+
+-- StarterGui.Gui for AR2.Frame.TextButton.LocalScript
+G2L["5"] = Instance.new("LocalScript", G2L["4"]);
+
+
+
+-- StarterGui.Gui for AR2.Frame.LocalScript
+G2L["6"] = Instance.new("LocalScript", G2L["2"]);
+
+
+
+-- StarterGui.Gui for AR2.Frame.TextBox
+G2L["7"] = Instance.new("TextBox", G2L["2"]);
+G2L["7"]["CursorPosition"] = -1;
+G2L["7"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7"]["BorderSizePixel"] = 0;
+G2L["7"]["TextSize"] = 14;
+G2L["7"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["7"]["Size"] = UDim2.new(0, 501, 0, 50);
+G2L["7"]["Position"] = UDim2.new(0.01271, 0, 0.0334, 0);
+G2L["7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7"]["Text"] = [[Apocalypse rising 2 misc scripts]];
+
+
+-- StarterGui.Gui for AR2.Frame.(X) to hide
+G2L["8"] = Instance.new("TextBox", G2L["2"]);
+G2L["8"]["CursorPosition"] = -1;
+G2L["8"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8"]["BorderSizePixel"] = 0;
+G2L["8"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8"]["TextSize"] = 14;
+G2L["8"]["Name"] = [[(X) to hide]];
+G2L["8"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["8"]["Size"] = UDim2.new(0, 183, 0, 25);
+G2L["8"]["Position"] = UDim2.new(0.32722, 0, 0.88835, 0);
+G2L["8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8"]["Text"] = [[[X] to hide]];
+
+
+-- StarterGui.Gui for AR2.Frame.TextButton.LocalScript
+local function C_5()
+local script = G2L["5"];
+	-- LocalScript inside the TextButton
+	
+	local button = script.Parent
+	
+	button.MouseButton1Click:Connect(function()
+		print("Button Clicked!")
+		local Players = game:GetService("Players")
+		local RunService = game:GetService("RunService")
+		local Camera = workspace.CurrentCamera
+		local UserInputService = game:GetService("UserInputService")
+	
+		local espColor = Color3.fromRGB(255, 80, 10)
+		local textSize = 14
+		local toggleKey = Enum.KeyCode.T
+		local espEnabled = true
+	
+		local localPlayer = Players.LocalPlayer -- Store local player reference
+		local espObjects = {} -- Table to store ESP objects
+	
+		-- Function to create or update ESP for a player
+		local function updateESP(player)
+			if player == localPlayer then return end
+	
+			-- Check if ESP objects already exist for this player
+			if not espObjects[player.UserId] then
+				espObjects[player.UserId] = {}
+			end
+	
+			local nameLabel = espObjects[player.UserId].nameLabel
+			local distanceLabel = espObjects[player.UserId].distanceLabel
+	
+			if not player.Character or not player.Character:FindFirstChild("Head") then
+				-- Clean up if the character or head is not found
+				if nameLabel then
+					nameLabel:Remove()
+					espObjects[player.UserId].nameLabel = nil
+				end
+				if distanceLabel then
+					distanceLabel:Remove()
+					espObjects[player.UserId].distanceLabel = nil
+				end
+				return
+			end
+	
+			local head = player.Character:FindFirstChild("Head")
+			if not nameLabel then
+				-- Create Drawing objects if they do not exist
+				nameLabel = Drawing.new("Text")
+				nameLabel.Text = player.Name
+				nameLabel.Color = espColor
+				nameLabel.Size = textSize
+				nameLabel.Center = true
+				nameLabel.Outline = true
+				nameLabel.OutlineColor = Color3.fromRGB(0, 0, 0)
+				nameLabel.Transparency = 1
+				nameLabel.Visible = false
+	
+				distanceLabel = Drawing.new("Text")
+				distanceLabel.Text = ""
+				distanceLabel.Color = espColor
+				distanceLabel.Size = textSize - 2
+				distanceLabel.Center = true
+				distanceLabel.Outline = true
+				distanceLabel.OutlineColor = Color3.fromRGB(0, 0, 0)
+				distanceLabel.Transparency = 1
+				distanceLabel.Visible = false
+	
+				espObjects[player.UserId].nameLabel = nameLabel
+				espObjects[player.UserId].distanceLabel = distanceLabel
+			end
+	
+			-- Update Drawing objects
+			local screenPos, onScreen = Camera:WorldToViewportPoint(head.Position)
+			if onScreen then
+				nameLabel.Position = Vector2.new(screenPos.X, screenPos.Y - 50)
+				distanceLabel.Position = Vector2.new(screenPos.X, screenPos.Y - 30)
+	
+				if localPlayer and localPlayer.Character then
+					local distance = (head.Position - localPlayer.Character:FindFirstChild("HumanoidRootPart").Position).Magnitude
+					distanceLabel.Text = string.format("(%d studs)", math.floor(distance))
+				end
+	
+				nameLabel.Visible = espEnabled
+				distanceLabel.Visible = espEnabled
+			else
+				nameLabel.Visible = false
+				distanceLabel.Visible = false
+			end
+		end
+	
+		-- Toggle ESP on and off
+		UserInputService.InputBegan:Connect(function(input, gameProcessed)
+			if not gameProcessed and input.KeyCode == toggleKey then
+				espEnabled = not espEnabled
+			end
+		end)
+	
+		-- Manage ESP for all players
+		RunService.RenderStepped:Connect(function()
+			for _, player in pairs(Players:GetPlayers()) do
+				updateESP(player)
+			end
+		end)
+	
+		-- Handle new players joining
+		Players.PlayerAdded:Connect(function(player)
+			-- Initialize ESP for the new player
+			espObjects[player.UserId] = {}
+			updateESP(player)
+		end)
+	
+		-- Clean up ESP when players leave
+		Players.PlayerRemoving:Connect(function(player)
+			if espObjects[player.UserId] then
+				if espObjects[player.UserId].nameLabel then
+					espObjects[player.UserId].nameLabel:Remove()
+				end
+				if espObjects[player.UserId].distanceLabel then
+					espObjects[player.UserId].distanceLabel:Remove()
+				end
+				espObjects[player.UserId] = nil
+			end
+		end)
+	end)
+end;
+task.spawn(C_5);
+-- StarterGui.Gui for AR2.Frame.LocalScript
+local function C_6()
+local script = G2L["6"];
+	-- LocalScript inside the Frame (or ScreenGui if you prefer)
+	local UIS = game:GetService("UserInputService")
+	local frame = script.Parent
+	
+	local dragging
+	local dragInput
+	local dragStart
+	local startPos
+	
+	-- Function to update the position of the frame
+	local function update(input)
+		local delta = input.Position - dragStart
+		frame.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+	end
+	
+	-- Make GUI draggable
+	frame.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			dragging = true
+			dragStart = input.Position
+			startPos = frame.Position
+	
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	frame.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement then
+			dragInput = input
+		end
+	end)
+	
+	UIS.InputChanged:Connect(function(input)
+		if input == dragInput and dragging then
+			update(input)
+		end
+	end)
+	
+	-- Toggle GUI visibility with the 'X' key
+	UIS.InputBegan:Connect(function(input, gameProcessed)
+		if gameProcessed then return end  -- If the input was processed by the game, do nothing
+	
+		if input.KeyCode == Enum.KeyCode.X then
+			frame.Visible = not frame.Visible
+		end
+	end)
+	
+end;
+task.spawn(C_6);
+
+return G2L["1"], require;

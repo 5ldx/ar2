@@ -1,231 +1,233 @@
---[=[
- d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
-88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
-88      88    88    88            odD'      88      88    88 88ooo88 
-88  ooo 88    88    88          .88'        88      88    88 88~~~88 
-88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88    @uniquadev
- Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
-]=]
+-- Gui to Lua
+-- Version: 3.2
 
--- Instances: 8 | Scripts: 2 | Modules: 0 | Tags: 0
-local G2L = {};
+-- Instances:
 
--- StarterGui.Gui for AR2
-G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
-G2L["1"]["Name"] = [[Gui for AR2]];
-G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+local GuiforAR2 = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local TextButton = Instance.new("TextButton")
+local TextButton_2 = Instance.new("TextButton")
+local TextButton_3 = Instance.new("TextButton")
+local TextButton_4 = Instance.new("TextButton")
+local Frame_2 = Instance.new("Frame")
 
+--Properties:
 
--- StarterGui.Gui for AR2.Frame
-G2L["2"] = Instance.new("Frame", G2L["1"]);
-G2L["2"]["BorderSizePixel"] = 0;
-G2L["2"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 0);
-G2L["2"]["Style"] = Enum.FrameStyle.DropShadow;
-G2L["2"]["Size"] = UDim2.new(0, 532, 0, 286);
-G2L["2"]["Position"] = UDim2.new(0.22719, 0, 0.27612, 0);
-G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+GuiforAR2.Name = "Gui for AR2"
+GuiforAR2.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+GuiforAR2.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
+Frame.Parent = GuiforAR2
+Frame.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.266597331, 0, 0.245024875, 0)
+Frame.Size = UDim2.new(0, 532, 0, 286)
+Frame.Style = Enum.FrameStyle.DropShadow
 
--- StarterGui.Gui for AR2.Frame.TextButton
-G2L["3"] = Instance.new("TextButton", G2L["2"]);
-G2L["3"]["BorderSizePixel"] = 0;
-G2L["3"]["TextSize"] = 14;
-G2L["3"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["3"]["BackgroundColor3"] = Color3.fromRGB(255, 161, 178);
-G2L["3"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["3"]["Size"] = UDim2.new(0, 250, 0, 52);
-G2L["3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["3"]["Text"] = [[AIMLOCK, coming soon]];
-G2L["3"]["Style"] = Enum.ButtonStyle.RobloxRoundButton;
-G2L["3"]["Position"] = UDim2.new(-0.00093, 0, 0.49922, 0);
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 160, 177)
+TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0.512139559, 0, 0.474742234, 0)
+TextButton.Size = UDim2.new(0, 250, 0, 39)
+TextButton.Style = Enum.ButtonStyle.RobloxRoundButton
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "Hitreg expander, soon"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextSize = 14.000
 
+TextButton_2.Parent = Frame
+TextButton_2.BackgroundColor3 = Color3.fromRGB(255, 117, 37)
+TextButton_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_2.BorderSizePixel = 0
+TextButton_2.Position = UDim2.new(-0.00140552956, 0, 0.315031469, 0)
+TextButton_2.Size = UDim2.new(0, 250, 0, 39)
+TextButton_2.Style = Enum.ButtonStyle.RobloxRoundButton
+TextButton_2.Font = Enum.Font.SourceSans
+TextButton_2.Text = "ESP, T to e/d"
+TextButton_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_2.TextSize = 14.000
+TextButton_2.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/5ldx/AFO/main/T"))()
+end)
 
--- StarterGui.Gui for AR2.Frame.TextButton
-G2L["4"] = Instance.new("TextButton", G2L["2"]);
-G2L["4"]["BorderSizePixel"] = 0;
-G2L["4"]["TextSize"] = 14;
-G2L["4"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["4"]["BackgroundColor3"] = Color3.fromRGB(255, 118, 38);
-G2L["4"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["4"]["Size"] = UDim2.new(0, 250, 0, 52);
-G2L["4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["4"]["Text"] = [[ESP, T to e/d]];
-G2L["4"]["Style"] = Enum.ButtonStyle.RobloxRoundButton;
-G2L["4"]["Position"] = UDim2.new(-0.00071, 0, 0.28256, 0);
-
-
--- StarterGui.Gui for AR2.Frame.TextButton.LocalScript
-G2L["5"] = Instance.new("LocalScript", G2L["4"]);
-
-
-
--- StarterGui.Gui for AR2.Frame.LocalScript
-G2L["6"] = Instance.new("LocalScript", G2L["2"]);
-
-
-
--- StarterGui.Gui for AR2.Frame.TextBox
-G2L["7"] = Instance.new("TextBox", G2L["2"]);
-G2L["7"]["CursorPosition"] = -1;
-G2L["7"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["7"]["BorderSizePixel"] = 0;
-G2L["7"]["TextSize"] = 14;
-G2L["7"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["7"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["7"]["Size"] = UDim2.new(0, 501, 0, 50);
-G2L["7"]["Position"] = UDim2.new(0.01271, 0, 0.0334, 0);
-G2L["7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["7"]["Text"] = [[Apocalypse rising 2 misc scripts]];
-
-
--- StarterGui.Gui for AR2.Frame.(X) to hide
-G2L["8"] = Instance.new("TextBox", G2L["2"]);
-G2L["8"]["CursorPosition"] = -1;
-G2L["8"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["8"]["BorderSizePixel"] = 0;
-G2L["8"]["TextStrokeColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["8"]["TextSize"] = 14;
-G2L["8"]["Name"] = [[(X) to hide]];
-G2L["8"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["8"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-G2L["8"]["Size"] = UDim2.new(0, 183, 0, 25);
-G2L["8"]["Position"] = UDim2.new(0.32722, 0, 0.88835, 0);
-G2L["8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["8"]["Text"] = [[[X] to hide]];
-
-
--- StarterGui.Gui for AR2.Frame.TextButton.LocalScript
-local function C_5()
-local script = G2L["5"];
-	-- LocalScript inside the TextButton
-	
-	local button = script.Parent
-	
-	button.MouseButton1Click:Connect(function()
-		print("Button Clicked!")
-		local Players = game:GetService("Players")
-		local RunService = game:GetService("RunService")
-		local Camera = workspace.CurrentCamera
-		local UserInputService = game:GetService("UserInputService")
-	
-		local espColor = Color3.fromRGB(255, 80, 10)
-		local textSize = 14
-		local toggleKey = Enum.KeyCode.T
-		local espEnabled = true
-	
-		local localPlayer = Players.LocalPlayer -- Store local player reference
-		local espObjects = {} -- Table to store ESP objects
-	
-		-- Function to create or update ESP for a player
-		local function updateESP(player)
-			if player == localPlayer then return end
-	
-			-- Check if ESP objects already exist for this player
-			if not espObjects[player.UserId] then
-				espObjects[player.UserId] = {}
-			end
-	
-			local nameLabel = espObjects[player.UserId].nameLabel
-			local distanceLabel = espObjects[player.UserId].distanceLabel
-	
-			if not player.Character or not player.Character:FindFirstChild("Head") then
-				-- Clean up if the character or head is not found
-				if nameLabel then
-					nameLabel:Remove()
-					espObjects[player.UserId].nameLabel = nil
-				end
-				if distanceLabel then
-					distanceLabel:Remove()
-					espObjects[player.UserId].distanceLabel = nil
-				end
-				return
-			end
-	
-			local head = player.Character:FindFirstChild("Head")
-			if not nameLabel then
-				-- Create Drawing objects if they do not exist
-				nameLabel = Drawing.new("Text")
-				nameLabel.Text = player.Name
-				nameLabel.Color = espColor
-				nameLabel.Size = textSize
-				nameLabel.Center = true
-				nameLabel.Outline = true
-				nameLabel.OutlineColor = Color3.fromRGB(0, 0, 0)
-				nameLabel.Transparency = 1
-				nameLabel.Visible = false
-	
-				distanceLabel = Drawing.new("Text")
-				distanceLabel.Text = ""
-				distanceLabel.Color = espColor
-				distanceLabel.Size = textSize - 2
-				distanceLabel.Center = true
-				distanceLabel.Outline = true
-				distanceLabel.OutlineColor = Color3.fromRGB(0, 0, 0)
-				distanceLabel.Transparency = 1
-				distanceLabel.Visible = false
-	
-				espObjects[player.UserId].nameLabel = nameLabel
-				espObjects[player.UserId].distanceLabel = distanceLabel
-			end
-	
-			-- Update Drawing objects
-			local screenPos, onScreen = Camera:WorldToViewportPoint(head.Position)
-			if onScreen then
-				nameLabel.Position = Vector2.new(screenPos.X, screenPos.Y - 50)
-				distanceLabel.Position = Vector2.new(screenPos.X, screenPos.Y - 30)
-	
-				if localPlayer and localPlayer.Character then
-					local distance = (head.Position - localPlayer.Character:FindFirstChild("HumanoidRootPart").Position).Magnitude
-					distanceLabel.Text = string.format("(%d studs)", math.floor(distance))
-				end
-	
-				nameLabel.Visible = espEnabled
-				distanceLabel.Visible = espEnabled
-			else
-				nameLabel.Visible = false
-				distanceLabel.Visible = false
+TextButton_3.Parent = Frame
+TextButton_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_3.BorderSizePixel = 0
+TextButton_3.Position = UDim2.new(-0.000537958345, 0, 0.476464331, 0)
+TextButton_3.Size = UDim2.new(0, 250, 0, 39)
+TextButton_3.Style = Enum.ButtonStyle.RobloxRoundButton
+TextButton_3.Font = Enum.Font.SourceSans
+TextButton_3.Text = "Performance booster"
+TextButton_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_3.TextSize = 14.000
+TextButton_3.MouseButton1Down:connect(function()
+	local function optimizeParticleEffects()
+		for _, particleEmitter in ipairs(workspace:GetDescendants()) do
+			if particleEmitter:IsA("ParticleEmitter") then
+				particleEmitter.Rate = 10 -- Reduce the rate of particles
+				particleEmitter.Lifetime = NumberRange.new(0.5) -- Shorter lifetime for particles
+				particleEmitter.Size = NumberSequence.new(0.5) -- Reduce particle size
+				print("Particle emitter optimized.")
 			end
 		end
-	
-		-- Toggle ESP on and off
-		UserInputService.InputBegan:Connect(function(input, gameProcessed)
-			if not gameProcessed and input.KeyCode == toggleKey then
-				espEnabled = not espEnabled
+	end
+
+	optimizeParticleEffects()
+
+	local function createBillboard(position)
+		local billboard = Instance.new("BillboardGui")
+		billboard.Size = UDim2.new(0, 100, 0, 100) -- Size of the billboard
+		billboard.Adornee = Instance.new("Part", workspace) -- Create a part to attach the billboard to
+		billboard.Adornee.Position = position
+
+		local image = Instance.new("ImageLabel", billboard)
+		image.Size = UDim2.new(1, 0, 1, 0)
+		image.Image = "rbxassetid://YOUR_IMAGE_ID" -- Replace with your image ID
+
+		print("Billboard created at " .. tostring(position))
+	end
+
+	createBillboard(Vector3.new(0, 10, 0)) -- Example usage
+
+	local function disableLightingEffects()
+		local Lighting = game:GetService("Lighting")
+		Lighting.ShadowSoftness = 0 -- Disable shadows
+		Lighting.FogEnd = 0 -- Disable fog
+		Lighting.OutdoorAmbient = Color3.new(1, 1, 1) -- Set outdoor ambient light to a flat color
+		print("Unused lighting effects disabled.")
+	end
+
+	disableLightingEffects()
+
+	-- Script to Change All Parts to Smooth Plastic
+
+	local function changePartsToSmoothPlastic()
+		for _, part in ipairs(workspace:GetDescendants()) do
+			if part:IsA("BasePart") then
+				-- Change the material to SmoothPlastic
+				part.Material = Enum.Material.SmoothPlastic
+				-- Optionally, set the color to a default or specific color
+				part.Color = Color3.new(0.8, 0.8, 0.8) -- Light gray color
 			end
-		end)
-	
-		-- Manage ESP for all players
-		RunService.RenderStepped:Connect(function()
-			for _, player in pairs(Players:GetPlayers()) do
-				updateESP(player)
+		end
+		print("All parts changed to Smooth Plastic.")
+	end
+
+	-- Call the function to execute
+	changePartsToSmoothPlastic()
+end)
+
+TextButton_4.Parent = Frame
+TextButton_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_4.BorderSizePixel = 0
+TextButton_4.Position = UDim2.new(0.512706876, 0, 0.314999998, 0)
+TextButton_4.Size = UDim2.new(0, 250, 0, 39)
+TextButton_4.Style = Enum.ButtonStyle.RobloxRoundButton
+TextButton_4.Font = Enum.Font.SourceSans
+TextButton_4.Text = "Cham"
+TextButton_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_4.TextSize = 14.000
+TextButton_4.MouseButton1Down:connect(function()
+	-- Local Player Outline Cham Script with Invisible Shirt and Pants
+
+	local player = game.Players.LocalPlayer
+
+	-- Function to get the character
+	local function getCharacter()
+		return player.Character or player.CharacterAdded:Wait()
+	end
+
+	-- Function to apply outline effect and change material to glossy glass
+	local function applyOutline(character)
+		local parts = {
+			character:FindFirstChild("LeftFoot"),
+			character:FindFirstChild("LeftHand"),
+			character:FindFirstChild("LeftLowerArm"),
+			character:FindFirstChild("LeftLowerLeg"),
+			character:FindFirstChild("LeftUpperArm"),
+			character:FindFirstChild("LeftUpperLeg"),
+			character:FindFirstChild("LowerTorso"),
+			character:FindFirstChild("RightFoot"),
+			character:FindFirstChild("RightHand"),
+			character:FindFirstChild("RightLowerArm"),
+			character:FindFirstChild("RightLowerLeg"),
+			character:FindFirstChild("RightUpperArm"),
+			character:FindFirstChild("RightUpperLeg"),
+			character:FindFirstChild("UpperTorso"),
+			character:FindFirstChild("Head"),
+		}
+
+		-- Make character parts invisible, create outlines, and set material
+		for _, part in ipairs(parts) do
+			if part and part:IsA("BasePart") then
+				part.Transparency = 0.9 -- Make the part mostly invisible
+				part.Material = Enum.Material.Glass -- Set material to glossy glass
+
+				local highlight = Instance.new("Highlight")
+				highlight.Adornee = part
+				highlight.FillTransparency = 1.0 -- Outline only, no fill
+				highlight.OutlineTransparency = 0.5 -- Adjust outline transparency
+				highlight.OutlineColor = Color3.new(1, 1, 1) -- Set outline color to white
+				highlight.Parent = game.CoreGui -- Ensure highlight is parented to CoreGui
+
+				print("Applied outline to: " .. part.Name) -- Debug output
+			else
+				print("Part not found or not a BasePart: " .. tostring(part)) -- Debug output
 			end
+		end
+	end
+
+	-- Function to make shirt and pants invisible
+	local function makeClothingInvisible(character)
+		local shirt = character:FindFirstChildOfClass("Shirt")
+		if shirt then
+			shirt.ShirtTemplate = "" -- Make Shirt invisible
+			print("Shirt made invisible")
+		end
+
+		local pants = character:FindFirstChildOfClass("Pants")
+		if pants then
+			pants.PantsTemplate = "" -- Make Pants invisible
+			print("Pants made invisible")
+		end
+	end
+
+	-- Main function to create outline effect and make clothing invisible
+	local function onCharacterAdded(character)
+		makeClothingInvisible(character)
+		applyOutline(character)
+
+		-- Connect to CharacterAdded event for respawns
+		player.CharacterAdded:Connect(function(newCharacter)
+			makeClothingInvisible(newCharacter)
+			applyOutline(newCharacter)
 		end)
-	
-		-- Handle new players joining
-		Players.PlayerAdded:Connect(function(player)
-			-- Initialize ESP for the new player
-			espObjects[player.UserId] = {}
-			updateESP(player)
-		end)
-	
-		-- Clean up ESP when players leave
-		Players.PlayerRemoving:Connect(function(player)
-			if espObjects[player.UserId] then
-				if espObjects[player.UserId].nameLabel then
-					espObjects[player.UserId].nameLabel:Remove()
-				end
-				if espObjects[player.UserId].distanceLabel then
-					espObjects[player.UserId].distanceLabel:Remove()
-				end
-				espObjects[player.UserId] = nil
-			end
-		end)
-	end)
-end;
-task.spawn(C_5);
--- StarterGui.Gui for AR2.Frame.LocalScript
-local function C_6()
-local script = G2L["6"];
+	end
+
+	-- Start by checking the current character
+	if player.Character then
+		onCharacterAdded(player.Character)
+	else
+		player.CharacterAdded:Connect(onCharacterAdded)
+	end
+end)
+
+Frame_2.Parent = Frame
+Frame_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_2.BorderSizePixel = 0
+Frame_2.Position = UDim2.new(0.0128493914, 0, 0.0485384203, 0)
+Frame_2.Size = UDim2.new(0, 500, 0, 58)
+
+-- Scripts:
+
+local function EGXH_fake_script() -- Frame.LocalScript 
+	local script = Instance.new('LocalScript', Frame)
+
 	-- LocalScript inside the Frame (or ScreenGui if you prefer)
 	local UIS = game:GetService("UserInputService")
 	local frame = script.Parent
@@ -277,7 +279,5 @@ local script = G2L["6"];
 		end
 	end)
 	
-end;
-task.spawn(C_6);
-
-return G2L["1"], require;
+end
+coroutine.wrap(EGXH_fake_script)()

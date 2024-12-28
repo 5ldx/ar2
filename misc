@@ -33,9 +33,12 @@ TextButton.Position = UDim2.new(0.512139559, 0, 0.474742234, 0)
 TextButton.Size = UDim2.new(0, 250, 0, 39)
 TextButton.Style = Enum.ButtonStyle.RobloxRoundButton
 TextButton.Font = Enum.Font.SourceSans
-TextButton.Text = "Hitreg expander, soon"
+TextButton.Text = "Aimlock"
 TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.TextSize = 14.000
+TextButton.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/5ldx/yer/refs/heads/main/yer"))()
+end)
 
 TextButton_2.Parent = Frame
 TextButton_2.BackgroundColor3 = Color3.fromRGB(255, 117, 37)

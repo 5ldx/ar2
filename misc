@@ -277,7 +277,7 @@ local function EGXH_fake_script() -- Frame.LocalScript
 	UIS.InputBegan:Connect(function(input, gameProcessed)
 		if gameProcessed then return end  -- If the input was processed by the game, do nothing
 	
-		if input.KeyCode == Enum.KeyCode.X then
+		if input.KeyCode == Enum.KeyCode.B then
 			frame.Visible = not frame.Visible
 		end
 	end)

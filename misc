@@ -52,7 +52,7 @@ TextButton_2.Text = "ESP, T to e/d"
 TextButton_2.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextButton_2.TextSize = 14.000
 TextButton_2.MouseButton1Down:connect(function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/5ldx/AFO/main/T"))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/5ldx/AFO/refs/heads/main/T"))()
 end)
 
 TextButton_3.Parent = Frame
